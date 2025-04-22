@@ -1,1 +1,28 @@
-<p>contact works!</p>
+<div class="contact-wrapper">
+  <div class="contact-left">
+    <h1>Contactez-moi</h1>
+    <p class="subtitle">Je suis disponible pour discuter d’un projet ou d’une opportunité.</p>
+    <img src="assets/images/contact-avatar.svg" class="contact-image" />
+  </div>
+
+  <p-card class="contact-card">
+    <div class="contact-infos">
+      <div class="info-item linkedin" (click)="openLinkedIn()">
+        <i class="pi pi-linkedin"></i>
+        <span class="label">LinkedIn</span>
+      </div>
+      <p-divider></p-divider>
+
+      <div class="info-item mail" (click)="sendMail()">
+        <i class="pi pi-envelope"></i>
+        <span class="label">camille.cabrol&#64;free.fr</span>
+      </div>
+      <p-divider></p-divider>
+
+      <div class="info-item phone">
+        <i class="pi pi-phone"></i>
+        <span class="label">+33 6 95 88 59 27</span>
+      </div>
+    </div>
+  </p-card>
+</div>
