@@ -1,1 +1,27 @@
-<p>skills works!</p>
+<div class="skills-wrapper">
+  <div class="skills-left">
+    <h1 class="skills-title">Mes compétences</h1>
+    <p class="subtitle">Voici les compétences que j'ai acquises au fil de mes expériences et formations.</p>
+    <img src="assets/images/skills-avatar.svg" alt="Illustration" class="skills-image"/>
+  </div>
+  <div class="skills-right">
+    <p-buttonGroup class="category-filter">
+      <button
+        *ngFor="let cat of categories"
+        pButton
+        (click)="onCategoryChange(cat)"
+        [label]="cat"
+        [class.active]="selectedCategory === cat">
+      </button>
+    </p-buttonGroup>
+    <div class="chips-wrapper">
+      <span *ngFor="let c of filteredCompetences" [pTooltip]="c.description" tooltipPosition="top">
+      <p-chip
+        [label]="c.nom"
+        [image]="c.image"
+        styleClass="custom-chip">
+      </p-chip>
+      </span>
+    </div>
+  </div>
+</div>
