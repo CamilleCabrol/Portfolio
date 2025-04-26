@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 100px); // pour s'ajuster à ta navbar
+  min-height: calc(100vh - 100px);
   gap: 2rem;
   padding: 2rem;
   margin-left: 10%;
@@ -68,13 +68,11 @@
       transition: inherit;
     }
 
-    // Global hover effect
     &:hover {
       transform: scale(1.05);
     }
   }
 
-  // Hover color specific to each type
   .linkedin:hover {
     i, .label {
       color: #0077B5;

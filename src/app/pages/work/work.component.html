@@ -1,0 +1,27 @@
+<div class="work-wrapper">
+  <h1 class="work-title">Parcours professionnel</h1>
+
+  <div class="work-timeline">
+    <p-timeline [value]="experiences" layout="vertical" align="left">
+      <ng-template pTemplate="marker" let-exp>
+        <div class="custom-marker">
+          <i class="pi pi-briefcase"></i>
+        </div>
+      </ng-template>
+
+      <ng-template pTemplate="content" let-exp>
+        <div class="work-card">
+          <div class="work-header">
+            <h3>{{ exp.title }}</h3>
+            <span class="work-date">{{ exp.date }}</span>
+          </div>
+          <h4 class="work-subtitle">{{ exp.company }}</h4>
+          <p class="work-desc">{{ exp.description }}</p>
+          <div class="work-skills">
+            <span class="skill-badge" *ngFor="let skill of exp.skills">{{ skill }}</span>
+          </div>
+        </div>
+      </ng-template>
+    </p-timeline>
+  </div>
+</div>

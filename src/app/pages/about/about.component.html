@@ -1,1 +1,18 @@
-<p>about works!</p>
+<div class="about-wrapper">
+  <h1 class="about-title">Informations personnelles</h1>
+
+  <div class="about-list">
+    <div class="about-item" *ngFor="let info of infos">
+      <div class="about-icon">{{ info.icon }}</div>
+      <div class="about-content">
+        <h3>{{ info.title }}</h3>
+        <ul *ngIf="Array.isArray(info.text); else paragraph">
+          <li *ngFor="let item of info.text">{{ item }}</li>
+        </ul>
+        <ng-template #paragraph>
+          <p>{{ info.text }}</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MenubarModule} from 'primeng/menubar';
 import {MenuItem} from 'primeng/api';
@@ -15,11 +15,51 @@ export class NavbarComponent {
 
   ngOnInit() {
     this.items = [
-      { label: 'Accueil', routerLink: '/' },
-      { label: 'À propos', routerLink: '/a-propos' },
-      { label: 'Projets', routerLink: '/projets' },
-      { label: 'Compétences', routerLink: '/competences' },
-      { label: 'Contact', routerLink: '/contact' }
+      {
+        label: 'Accueil',
+        icon: 'pi pi-home',
+        routerLink: '/'
+      },
+      {
+        label: 'À propos',
+        items: [
+          {
+            label: 'Informations personnelles',
+            icon: 'pi pi-info',
+            routerLink: '/a-propos'
+          },
+          {
+            label: 'Parcours professionnel',
+            icon: 'pi pi-briefcase',
+            routerLink: '/parcours-professionnel'
+          },
+          {
+            label: 'Parcours scolaire',
+            icon: 'pi pi-graduation-cap',
+            routerLink: '/parcours-scolaire'
+          },
+          {
+            label: 'Recommandations',
+            icon: 'pi pi-clipboard',
+            routerLink: '/recommandations'
+          },
+        ]
+      },
+      {
+        label: 'Projets',
+        icon : 'pi pi-code',
+        routerLink: '/projets'
+      },
+      {
+        label: 'Compétences',
+        icon: 'pi pi-star',
+        routerLink: '/competences'
+      },
+      {
+        label: 'Contact',
+        icon: 'pi pi-user',
+        routerLink: '/contact'
+      }
     ];
   }
 }

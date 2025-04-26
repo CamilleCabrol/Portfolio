@@ -1,0 +1,106 @@
+.work-wrapper {
+  padding: 3rem 2rem;
+  min-height: calc(100vh - 100px);
+  text-align: left;
+
+  .work-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color-text);
+    font-family: var(--font-title);
+    margin-bottom: 0.5rem;
+  }
+
+  .work-timeline {
+    max-width: 900px;
+    margin: auto;
+
+    ::ng-deep .p-timeline-event-opposite {
+      display: none;
+    }
+
+    ::ng-deep .p-timeline-event {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    ::ng-deep .p-timeline-event-content {
+      padding: 1rem 2rem;
+    }
+
+    ::ng-deep .p-timeline-event-marker {
+      margin-top: 0 !important;
+      align-self: center;
+    }
+
+    ::ng-deep .custom-marker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-text);
+      color: white;
+      border-radius: 50%;
+      width: 2.2rem;
+      height: 2.2rem;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .work-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+
+      .work-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        h3 {
+          font-size: 1.3rem;
+          font-weight: bold;
+          color: var(--color-primary);
+        }
+
+        .work-date {
+          font-size: 0.9rem;
+          color: #888;
+        }
+      }
+
+      .work-subtitle {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #666;
+        margin-bottom: 0.8rem;
+      }
+
+      .work-desc {
+        font-size: 0.95rem;
+        color: var(--color-text);
+        font-family: var(--font-text);
+      }
+
+      .work-skills {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .skill-badge {
+          background-color: #eef0ec;
+          color: #333;
+          padding: 0.3rem 0.75rem;
+          border-radius: 1rem;
+          font-size: 0.85rem;
+          font-family: var(--font-text);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+      }
+
+    }
+  }
+}

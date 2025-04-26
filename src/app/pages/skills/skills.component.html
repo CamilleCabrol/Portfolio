@@ -15,7 +15,7 @@
       </button>
     </p-buttonGroup>
     <div class="chips-wrapper">
-      <span *ngFor="let c of filteredCompetences" [pTooltip]="c.description" tooltipPosition="top">
+      <span *ngFor="let c of filteredCompetences" style="text-align: center" [pTooltip]="c.description" tooltipPosition="top">
       <p-chip
         [label]="c.nom"
         [image]="c.image"

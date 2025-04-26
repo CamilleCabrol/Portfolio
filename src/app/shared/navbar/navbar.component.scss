@@ -5,7 +5,7 @@
   padding: 0 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between; // espace entre logo et menu
+  justify-content: space-between;
   position: relative;
 
   .p-menubar-start {
@@ -24,7 +24,7 @@
   .p-menubar-root-list {
     flex: 2;
     display: flex;
-    justify-content: center; // centré horizontalement
+    justify-content: center;
     align-items: center;
     gap: 2rem;
     list-style: none;

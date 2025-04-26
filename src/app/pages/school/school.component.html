@@ -1,0 +1,24 @@
+<div class="school-wrapper">
+  <h1 class="school-title">Parcours scolaire</h1>
+
+  <div class="school-timeline">
+    <p-timeline [value]="studies" layout="vertical" align="left">
+      <ng-template pTemplate="marker">
+        <div class="custom-marker">
+          <i class="pi pi-book"></i>
+        </div>
+      </ng-template>
+
+      <ng-template pTemplate="content" let-study>
+        <div class="school-card">
+          <div class="school-header">
+            <h3>{{ study.degree }}</h3>
+            <span class="school-date">{{ study.date }}</span>
+          </div>
+          <h4 class="school-subtitle">{{ study.school }}</h4>
+          <p class="school-desc">{{ study.description }}</p>
+        </div>
+      </ng-template>
+    </p-timeline>
+  </div>
+</div>

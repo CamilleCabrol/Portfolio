@@ -1,0 +1,16 @@
+<div class="recommendations-wrapper">
+  <h1 class="recommendations-title">Recommandations</h1>
+  <p class="recommendations-subtitle">
+    Voici quelques témoignages de personnes avec qui j’ai eu le plaisir de collaborer.
+  </p>
+
+  <div class="recommendations-list">
+    <p-card *ngFor="let rec of recommendations" class="recommendation-card">
+      <ng-template pTemplate="content">
+        <p class="recommendation-text">{{ rec.content }}</p>
+        <p class="recommendation-author">— {{ rec.author }}</p>
+        <p class="recommendation-role">{{ rec.role }}</p>
+      </ng-template>
+    </p-card>
+  </div>
+</div>
